@@ -1,7 +1,8 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     dependencies = {
-        "nvim-treesitter/nvim-treesitter-context"
+        "nvim-treesitter/nvim-treesitter-context",
+        "windwp/nvim-ts-autotag",
     },
     build = ":TSUpdate",
     event = "BufReadPre",
@@ -33,6 +34,9 @@ return {
             },
             indent = {
                 enable = true,
+            },
+            autotag = {
+                enabled = true,
             },
         })
 

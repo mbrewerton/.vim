@@ -29,3 +29,5 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 -- <C-w><C-[h, l]> navigates to the previous and next tab
 vim.keymap.set("n", "<C-w><C-h>", ":tabprevious<CR>")
 vim.keymap.set("n", "<C-w><C-l>", ":tabnext<CR>")
+
+vim.keymap.set({"v", "i", "n"}, "<Bslash><Bslash>", "<Esc>", { noremap = true, silent = true })
