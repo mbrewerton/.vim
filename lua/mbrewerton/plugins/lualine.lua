@@ -101,23 +101,33 @@ return {
                 ['!'] = colors.red,
                 t = colors.red,
             }
-            return { fg = mode_to_color[vim.fn.mode()] }
+            return { fg = mode_to_color[vim.fn.mode()], bg = mode_to_color[vim.fn.mode()] }
         end
 
 
         ins_left {
             -- mode component
             function()
-                return '▊'
+                return '█'
             end,
-            color = mode_color,
-            padding = { left = 0, right = 1 }, -- We don't need space before this
+            color = mode_color ,
+            padding = { left = 1, right = 1 },
         }
 
         ins_left {
             'branch',
             icon = '',
             color = { fg = colors.orange },
+        }
+
+        ins_left {
+            'filename',
+            color = { fg = colors.fg },
+        }
+
+        ins_left {
+            'location',
+            color = { fg = colors.fg },
         }
 
         ins_left {
@@ -131,6 +141,8 @@ return {
             },
             cond = conditions.hide_in_width,
         }
+
+
 
         -- Insert mid section. You can make any number of sections in neovim :)
         -- for lualine it's any number greater then 2
@@ -204,10 +216,10 @@ return {
 
         ins_right {
             function()
-                return '▊'
+                return '█'
             end,
             color = mode_color,
-            padding = { left = 1 },
+            padding = { right = 1, left = 1 },
         }
 
         -- Now don't forget to initialize lualine
