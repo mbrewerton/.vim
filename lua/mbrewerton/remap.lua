@@ -31,3 +31,14 @@ vim.keymap.set("n", "<C-w><C-h>", ":tabprevious<CR>")
 vim.keymap.set("n", "<C-w><C-l>", ":tabnext<CR>")
 
 vim.keymap.set({"v", "i", "n"}, "<Bslash><Bslash>", "<C-[>", { noremap = true, silent = true })
+
+-- Dap debugger keybinds
+vim.keymap.set("n", "F5", "<Cmd>lua require'dap'.continue()<CR>", { silent = true })
+vim.keymap.set("n", "F10", "<Cmd>lua require'dap'.step_over()<CR>", { silent = true })
+vim.keymap.set("n", "F11", "<Cmd>lua require'dap'.step_into()<CR>", { silent = true })
+vim.keymap.set("n", "F12", "<Cmd>lua require'dap'.step_out()<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>db", "<Cmd>lua require'dap'.toggle_breakpoint()<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>dB", "<Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>lp", "<Cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>dr", "<Cmd>lua require'dap'.repl.open()<CR>", { silent = true })
+vim.keymap.set("n", "<Leader>dl", "<Cmd>lua require'dap'.run_last()<CR>", { silent = true })
