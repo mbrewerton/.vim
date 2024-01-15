@@ -30,4 +30,4 @@ vim.keymap.set("n", "<C-l>", "<C-w>l")
 vim.keymap.set("n", "<C-w><C-h>", ":tabprevious<CR>")
 vim.keymap.set("n", "<C-w><C-l>", ":tabnext<CR>")
 
-vim.keymap.set({"v", "i", "n"}, "<Bslash><Bslash>", "<Esc>", { noremap = true, silent = true })
+vim.keymap.set({"v", "i", "n"}, "<Bslash><Bslash>", "<C-[>", { noremap = true, silent = true })
