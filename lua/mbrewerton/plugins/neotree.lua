@@ -7,8 +7,8 @@ return {
         "MunifTanjim/nui.nvim",
     },
     keys = {
-        {"<C-k><C-b>", ":Neotree toggle<cr>"},
-        {"<C-k><C-r>", ":Neotree reveal<cr>"},
+        {"<C-k><C-r>", ":Neotree toggle<cr>"},
+        -- {"<C-k><C-r>", ":Neotree reveal<cr>"},
     },
     opts = {
         enable_diagnostics = false,

@@ -1,0 +1,3 @@
+return {
+    'pauchiner/pastelnight.nvim'
+}

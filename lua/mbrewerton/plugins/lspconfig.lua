@@ -70,7 +70,7 @@ return {
             ensure_installed = {
                 'tsserver',
                 'intelephense',
-                'angularls',
+                -- 'angularls',
                 'cssls',
                 'csharp_ls',
                 'eslint',
