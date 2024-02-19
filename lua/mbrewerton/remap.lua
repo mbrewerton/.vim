@@ -42,3 +42,7 @@ vim.keymap.set("n", "<Leader>dB", "<Cmd>lua require'dap'.set_breakpoint(vim.fn.i
 vim.keymap.set("n", "<Leader>lp", "<Cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>dr", "<Cmd>lua require'dap'.repl.open()<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>dl", "<Cmd>lua require'dap'.run_last()<CR>", { silent = true })
+
+-- fugitive
+vim.keymap.set("n", "g,", "<cmd>diffget //2<cr>")
+vim.keymap.set("n", "g.", "<cmd>diffget //3<cr>")
