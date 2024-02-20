@@ -27,13 +27,15 @@ return {
 
         -- Close
         { "<A-c>", "<Cmd>BufferClose<CR>", { noremap = true, silent = true } },
+        { "<A-r><A-c>", "<Cmd>BufferRestore<CR>", { noremap = true, silent = true } },
+        { "<A-p>", "<Cmd>BufferPin<CR>", { noremap = true, silent = true } },
     },
     config = function () 
         vim.g.barbar_auto_setup = false
 
         require('barbar').setup({
             highlight_visible = false,
-            animation = false,
+            animation = true,
             tabpages = true,
             icons = {
                 button = " ",
@@ -42,7 +44,7 @@ return {
                     right = "▊"
                 },
                 diagnostics = {
-                    [vim.diagnostic.severity.ERROR] = {enabled = true, icon = 'ﬀ'},
+                    [vim.diagnostic.severity.ERROR] = {enabled = true},
                     [vim.diagnostic.severity.WARN] = {enabled = true},
                     [vim.diagnostic.severity.INFO] = {enabled = true},
                     [vim.diagnostic.severity.HINT] = {enabled = true},
@@ -52,7 +54,8 @@ return {
                 added = {enabled = true, icon = '+'},
                 changed = {enabled = true, icon = '~'},
                 deleted = {enabled = true, icon = '-'},
-          }
+            },
+            pinned = {button = '', filename = true},
         })
     end
 }

@@ -28,23 +28,23 @@ return {
                 use_git_status_colors = false,
                 highlight = "NeoTreeFileName",
             },
-            git_status = {
-                symbols = {
-                    -- Disabling git seems wonky
-
-                    -- Change type
-                    added     = "", -- "+",
-                    modified  = "", -- "~",
-                    deleted   = "", -- "-",
-                    renamed   = "", -- ">",
-                    -- Status type
-                    untracked = "", -- "",
-                    ignored   = "", -- "",
-                    unstaged  = "", -- "󰄱",
-                    staged    = "", -- "",
-                    conflict  = "", -- "",
-                }
-            },
+            -- git_status = {
+            --     symbols = {
+            --         -- Disabling git seems wonky
+            --
+            --         -- Change type
+            --         added     = "", -- "+",
+            --         modified  = "", -- "~",
+            --         deleted   = "", -- "-",
+            --         renamed   = "", -- ">",
+            --         -- Status type
+            --         untracked = "", -- "",
+            --         ignored   = "", -- "",
+            --         unstaged  = "", -- "󰄱",
+            --         staged    = "", -- "",
+            --         conflict  = "", -- "",
+            --     }
+            -- },
             file_size = {
                 enabled = false,
             },

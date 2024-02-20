@@ -40,8 +40,8 @@ return {
             vim.keymap.set('n', 'gr', function() vim.lsp.buf.references() end, opts)
             vim.keymap.set('n', 'gs', function() vim.lsp.buf.signature_help() end, opts)
             vim.keymap.set("n", "gl", function() vim.diagnostic.open_float() end, opts)
-            vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-            vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
+            vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next() end, opts)
+            vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev() end, opts)
             vim.keymap.set("n", "<F2>", function() vim.lsp.buf.rename() end, opts)
             vim.keymap.set({'n', 'x'}, '<F3>', function() vim.lsp.buf.format({async = false, timeout_ms = 10000}) end, opts)
             vim.keymap.set("n", "<F4>", function() vim.lsp.buf.code_action() end, opts)
@@ -70,7 +70,7 @@ return {
             ensure_installed = {
                 'tsserver',
                 'intelephense',
-                -- 'angularls',
+                'angularls',
                 'cssls',
                 'csharp_ls',
                 'eslint',
