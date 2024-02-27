@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("mbrewerton.plugins", {
     checker = {
         enable = true,
-        notify = false,
+        notify = true,
     },
     change_detection = {
         notify = false

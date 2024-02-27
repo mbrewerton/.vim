@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Remap macro record
-vim.keymap.set("n", "<leader>q", "q")
+vim.keymap.set("n", "<leader>m", "q")
 vim.keymap.set("n", "q", "<nop>")
 
 -- Yank to clipboard
@@ -32,11 +32,21 @@ vim.keymap.set("n", "<C-w><C-l>", ":tabnext<CR>")
 
 vim.keymap.set({"v", "i", "n"}, "<Bslash><Bslash>", "<C-[>", { noremap = true, silent = true })
 
+-- Persistence
+-- restore the session for the current directory
+-- vim.keymap.set("n", "<leader>qs", "<cmd>lua require'persistence'.load()<cr>", { silent = true})
+--
+-- -- restore the last session
+-- vim.keymap.set("n", "<leader>ql", "<cmd>lua require'persistence'.load({ last = true })<cr>", { silent = true })
+--
+-- -- stop Persistence => session won't be saved on exit
+-- vim.keymap.set("n", "<leader>qd", "<cmd>lua require'persistence'.stop()<cr>", { silent = true })
+
 -- Dap debugger keybinds
 vim.keymap.set("n", "F5", "<Cmd>lua require'dap'.continue()<CR>", { silent = true })
 vim.keymap.set("n", "F10", "<Cmd>lua require'dap'.step_over()<CR>", { silent = true })
 vim.keymap.set("n", "F11", "<Cmd>lua require'dap'.step_into()<CR>", { silent = true })
-vim.keymap.set("n", "F12", "<Cmd>lua require'dap'.step_out()<CR>", { silent = true })
+--vim.keymap.set("n", "F12", "<Cmd>lua require'dap'.step_out()<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>db", "<Cmd>lua require'dap'.toggle_breakpoint()<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>dB", "<Cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", { silent = true })
 vim.keymap.set("n", "<Leader>lp", "<Cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", { silent = true })
@@ -46,3 +56,9 @@ vim.keymap.set("n", "<Leader>dl", "<Cmd>lua require'dap'.run_last()<CR>", { sile
 -- fugitive
 vim.keymap.set("n", "g,", "<cmd>diffget //2<cr>")
 vim.keymap.set("n", "g.", "<cmd>diffget //3<cr>")
+
+-- Diagnostics keybinds
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })

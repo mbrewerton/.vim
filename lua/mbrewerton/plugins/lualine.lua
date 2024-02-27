@@ -1,14 +1,13 @@
 return {
+    -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
-    config = function ()
-        local lualine = require('lualine')
-
-        local config = {
-            options = {
-                theme = 'pastelnight'
-            }
-        }
-
-        lualine.setup(config);
-    end
-}
+    -- See `:help lualine.txt`
+    opts = {
+      options = {
+        icons_enabled = false,
+        theme = 'auto',
+        component_separators = '|',
+        section_separators = '',
+      },
+    },
+  }
