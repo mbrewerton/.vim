@@ -6,7 +6,7 @@ return {
     },
     init = function() vim.g.barbar_auto_setup = false end,
     opts = {
-        separator = {left = '▎', right = '▎'}
+        separator = {left = '[', right = ']'}
     },
     config = function ()
         local map = vim.api.nvim_set_keymap
@@ -52,5 +52,6 @@ return {
         -- Other:
         -- :BarbarEnable - enables barbar (enabled by default)
         -- :BarbarDisable - very bad command, should never be used
+        require('barbar').setup()
     end
 }
