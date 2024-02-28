@@ -30,7 +30,7 @@ vim.defer_fn(function()
             'typescript',
             'vimdoc',
             'vim',
-            'bash'
+            'bash',
         },
 
         -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
@@ -166,7 +166,9 @@ local servers = {
     -- rust_analyzer = {},
     -- tsserver = {},
     -- html = { filetypes = { 'html', 'twig', 'hbs'} },
-
+    omnisharp = {
+        filetypes = { 'cs' }
+    },
     lua_ls = {
         Lua = {
             workspace = { checkThirdParty = false },
