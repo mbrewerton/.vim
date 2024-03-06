@@ -6,6 +6,8 @@
 
 Install [Neovim](https://github.com/neovim/neovim).
 
+#### Linux
+
 ```
 $ cd ~
 $ git clone https://github.com/mbrewerton/.vim.git
@@ -14,4 +16,13 @@ $ ln -s ~/.vim ~/.config/nvim
 $ nvim
 ```
 
+#### Windows
+```
+$ cd %LocalAppData%
+$ rm nvim
+$ git clone https://github.com/mbrewerton/.vim.git nvim
+$ nvim
+```
 Be sure to run `:checkhealth` dependancy issues (node, python, php, etc).
+
+
